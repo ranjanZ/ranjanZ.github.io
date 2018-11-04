@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>ranjan's blog - Random assortment of things</title>
+    <meta name="description" content="ranjan's blog" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, 
+            TeX: {equationNumbers: {autoNumber: "AMS"}}
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+
+</head>
+<body class="post-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="../../blog1.html">Home</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Basic 1</h1>
+            <section class="post-meta">                
+                <time class="post-date" datetime="2016-10-28">28 Apr 2016</time>
+                    on Basic1	
+            </section>
+        </header>
+
+<section class="post-content">
+        <p>
+	There are some basic concepts which are very important to understand machine learning.
+	</p>
+	<ul>
+	<li>Kullback–Leibler(KL) divergence
+	<li>Transformation of random variables 
+	</ul>
+
+
+
+
+
+
+
+
+<h3> Kullback–Leibler(KL) divergence </h3>
+<p>
+ ${KL(p||q) = \int_x p(x) log{p(x) \over q(x)} dx }$
+</p>
+ 
+<p>
+This is a measure that will tell you the difference between two probability distributions. Here p and q are two probability distributions. $KL(p||q)$ is  zero when $p(x)=q(x)$ for all $x$. 
+
+<ul>
+<li>$KL(p||q) \ge 0 $. [You can try to Prove]  </li>
+<li>More the value of $KL(p||q)$ more there is a difference between $p$ and $q$. </li>
+<li> $KL(p||q) \ne  KL(q||p)$. So these in not a symmetric measure</li>
+</ul>
+</p>
+
+<h3> Transformation of Random Variables </h3>
+<p>
+To clear your concept please read this <a href="basic1_dir/transform.pdf">pdf</a>.
+</p>
+
+<ul>
+ <li>
+	<p>
+	 In General If $X$ be a $n$ dimensional continuous random vector with  density function $f(x)$. $Y$ be a $m$ dimensional continuous random vector and $Y=g(X)$.  Then probability density function of Y is
+	  <p>
+	  $f_Y(y)=f_X(g^{-1}(y))\times |J|$ 
+	  </p>
+	 where $|J_{m \times n}|$ is the dererminant(iff $m=n$) of jacobian.
+	</p>
+
+ <li>
+	<p>From the above comcept we get a nice formula of expectation which is very useful. let $x$ follows distribution $p_x$   and $y$ folows  distribution $p_y$ and $g(x)=y$ then
+	<p>
+	$E_{x \sim p_{x}}[g(x)]=E_{y \sim p_{y}}[y]$ 
+	</p>
+	</p>
+</ul>
+
+
+<h3> Maximum Likelihood Estimation</h3>
+<p>why?</p>
+<p>when?</p>
+<p>Example</p>
+<p>when this will not work?</p>
+
+
+
+</section>
+
+
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="../../blog1.html">ranjan's blog</a> 
+    </footer>
+    <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+
+</body>
+</html>

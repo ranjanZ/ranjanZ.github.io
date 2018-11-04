@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>ranjan's blog - Random assortment of things</title>
+    <meta name="description" content="ranjan's blog" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, 
+            TeX: {equationNumbers: {autoNumber: "AMS"}}
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+
+</head>
+<body class="post-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="../../blog.html">Home</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">From Reasearch to  Django, AWS, Apache2 </h1>
+            <section class="post-meta">                
+                <time class="post-date" datetime="2016-04-28">2 Apr 2018</time>
+                    Server side coding
+            </section>
+ </header>
+
+
+
+
+<section class="post-content">
+        <p>
+
+	Suppose you are doing research in a particular image processing problem using DeepLearning and you are successful with solving that problem. Next you want to deploy at on web. Here I will discuss the steps in details, the problem I face and the the tricks to overcome tha
+
+	</p>
+
+	<p>
+	<h3>STEPS :</h3>
+		 <ul>
+	  <li>Solve a problem in image processing</li>
+	  <li>Writing django code for product webservice </li>
+	  <li>Setting   AWS  EC2 and install all the packages </li>
+	  <li>Integrating apache2 django and  Deploying
+	</ul> 
+	</p>
+
+	<h3>Solve a problem in image processing</h3>
+	Solve a real life  problem in image processing like Image Dehazing,Inpainting, etc
+
+	
+	<h3>Writing django code for product webservice</h3>
+	  <ul>
+	   <li> Install django</li>
+		<code class="codeblock">sudo pip install django</code>
+	   <li>Start a new project</li>
+		<code class="codeblock">django-admin startproject website </code>
+		<p> Here I have given project name as website. A folder will be created after executing the above code<br>
+		<code class="codeblock">cd  website </code>
+
+	   <li>Run the Server</li>
+		<p>To run the server at http://127.0.0.1:8000 <br> 
+		<code class="codeblock">python manage.py runserver </code>	<br>
+		If you want to access from other computer with in a closed network then 
+		<code class="codeblock">python manage.py runserver 0.0.0.0:8000 </code>
+		</p>
+		<p>This will give ALLOWED host probem  if you open webpage by the ip  of computer you are runnning the server. Set you computer IP in ALOWED_HOSTS list<br>
+		<code class="codeblock">vi website/settings.py </code><br>
+		<code class="codeblock">ALOWED_HOSTS=[u'192.168.59.3']</code><br>
+		 Now open the IP:port from browser, you will see the server is working
+		<p>
+	   <li>Start a new application</li>
+	 	<p>Now let's  say we want to make particular application in which many API call, Database connection will be established. For that you need to start a new app inside Django. Here my app name is staticpage<br>
+		<code class="codeblock">python manage.py startapp staticpage</code><br>
+		This will create a  directory named staticpage(appname) with all essential default  files. We have to edit  website/settings.py  and add staticpage to INSTALLED_APPS list. <br>
+		</p>
+
+	    <li>Creating a new page</li>
+		<code class="codeblock">vi website/urls.py</code><br>
+		<code class="codeblock" style=display:block;white-space:pre-wrap>from django.conf.urls import url,include
+ urlpatterns = [ url(r'^$', include('staticpage.urls')),]</code><br>
+		<p>when ever you type a url  it  checks website/urls.py, and tell where to search or where to go. urlpatterns takes regular expression. Here we are redicecting all the path to staticpage/urls.py file.</p> 			
+		<p>let us say when ever you type http://192.168.59.3:8000  it will open hit website/urls.py and from there it will redirect to staticpage/urls.py. Now create/edit a file under directory staticpage called urls.py<br>
+		<code class="codeblock">vi staticpage/urls.py</code><br>
+<code class="codeblock" style=display:block;white-space:pre-wrap>from django.conf.urls import url
+from . import views
+
+urlpatterns = [ url(r'^$',views.index,name='index'),]
+</code><br>
+		As views.py  doesn't exist so we have to create it under startic page views takes the requests and returns http response (GET,POST,etc)<br>
+	
+		<code class="codeblock">vi staticpage/views.py</code>
+<code class="codeblock" style=display:block;white-space:pre-wrap>
+from django.http import HttpResponse
+
+def index(request):
+    return(HttpPResponse(" &lth1&gt this is HTTP response &LT/h1&gt "))
+</code><br>
+		Now if you type http://192.168.59.3:8000/  if will  go to webpage/urls.py -> staticpage/urls.py ->  staticpage/views.py   -> and return  <br>
+		 &lth1&gt this is HTTP response &LT/h1&gt 
+
+
+
+
+
+            <li>Creating  Database</li>
+		<code class="codeblock">vi staticpage/models.py</code>
+		<code class="codeblock" style=display:block;white-space:pre-wrap>
+class  ALLDB(models.Model):
+    a_name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    token = models.CharField(max_length=200)
+    date = models.DateTimeField('date published')
+</code>
+
+		 <p>Create   database tables by editing  staticpage/models.py. To activate model we have to edit  website/settings.py  and add static page to INSTALLED_APPS list. to sync to database we have to run the following<br>
+	
+<code class="codeblock" style=display:block;white-space:pre-wrap>python manage.py makemigrations
+python manage.py migrate
+</code>
+
+
+
+		
+
+
+            <li>Test  Database</li>
+			
+		<code class="codeblock">python manage.py shell</code>
+
+<code class="codeblock" style=display:block;white-space:pre-wrap>from   staticpage import models
+from django.utils import timezone
+
+models.ALLDB.objects.all()
+q =models.ALLDB(a_name="Ranjan", date=timezone.now())
+q.save()
+models.ALLDB.objects.all()
+</code>
+
+
+
+            <li>Create a template page</li>
+
+		<code class="codeblock">mkdir staticpage/templates</code>
+		Make a directory called temmplates in app root directrory,inside that template directory  write any html file say index.html
+<code class="codeblock" style=display:block;white-space:pre-wrap>vi  staticpage/templates/index.html
+&lth1&gt this is  Inside Template &LT/h1&gt 
+</code><br>
+		<p>	Add teplate path to website/settings.py <br>
+		
+<code class="codeblock" style=display:block;white-space:pre-wrap>vi  website/settings.py
+TEMPLATE_DIRS = (
+    ['/home/ecsuiplab/Public/Website/website/staticpage/templates']
+</code> <br>
+	Edit  staticpage/views.py to  return template data. Note that we dont have to give  full path as the path  as path is already taken from website/settings.py
+<code class="codeblock" style=display:block;white-space:pre-wrap>vi staticpage/views.py
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+
+def index(request):
+    return(render(request, "index.html", {}))
+
+</code>
+		
+		<li>Store data into DB</li>
+		Please follow the code  bellow	
+	
+		<code class="codeblock" style=display:block;white-space:pre-wrap>vi staticpage/urls.py
+from django.conf.urls import url,include
+from . import views
+
+urlpatterns = [
+        url(r'^store',views.store_data,name='r'),
+        url(r'^get',views.get_data,name='r'),
+        url(r'^',views.home,name='home'),
+        ]
+
+</code>
+
+
+<code class="codeblock" style=display:block;white-space:pre-wrap>vi staticpage/views.py
+
+
+from  __future__ import unicode_literals
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+from models import *
+
+def home(request):
+    return(render(request, "index.html", {}))
+
+def store_data(request):
+    if request.method == 'POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        q=ALLDB(a_name=name,email=email)
+        q.save()
+        return(HttpResponse("&lth1&gt this is  POST &LT/h1&gt")) 
+    else:
+        return(HttpResponse("&lth1&gt this is  GET &LT/h1&gt")) 
+
+
+def get_data(request):
+    if request.method == 'POST':
+        return(HttpResponse("&lth1&gt this is POST &LT/h1&gt")) 
+    else:
+        return(HttpResponse(get_alldata()))
+</code>
+
+
+<code class="codeblock" style=display:block;white-space:pre-wrap>vi staticpage/templates/index.html
+</code>
+<xmp>
+<h1> Inside Template </h1>
+
+ <form action="/store"  method="post">{% csrf_token %}
+
+Name:<br>
+     <input type="text" name="name"><br>
+Email:<br>
+     <input type="text" name="email">
+
+  <input type="submit" value="Submit">
+</form>
+</xmp>
+
+
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\abs}[1]{| #1 |}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\ip}[2]{\langle #1, #2 \rangle}
+\newcommand{\NL}{\linebreak{NL}}
+\newcommand{\x}{\times}
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="../../blog1.html" style="background-image: url(../assets/images/mars.jpg)">
+                    <span class="hidden">Ranjan's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <!--<h4> Stephen Tu </h4> -->
+                    <!-- Author Bio -->
+                    <!--
+                    <p> 
+                        Here goes the author description. You might want to place some links too in here
+                    </p>
+                    -->
+                </section>                
+           
+ 
+            
+     </footer>
+</article>
+
+
+
+
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="../../blog1.html">ranjan's blog</a> 
+    </footer>
+    
+    <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+
+</body>
+</html>
