@@ -54,7 +54,7 @@ st.markdown("<style>" + css + "</style>", unsafe_allow_html=True)
 
 if selected_tab == "About":
     st.header("About")
-    st.image(base_path + "data/profile_picture1.jpg")  # Replace with your image path
+    st.image(base_path + "data/profile_picture1.jpg",width=300)  # Replace with your image path
 
 
     # About text
