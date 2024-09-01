@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-base_path="https://github.com/ranjanZ/ranjanZ.github.io/blob/master/streamlit_page/"
+base_path="https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/master/streamlit_page/"
 
 # Page title and layout
 st.set_page_config(page_title="My Streamlit Profile", layout="wide")
