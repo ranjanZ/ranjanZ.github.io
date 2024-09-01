@@ -1,5 +1,8 @@
 import streamlit as st
 
+
+base_path="https://github.com/ranjanZ/ranjanZ.github.io/blob/master/streamlit_page/"
+
 # Page title and layout
 st.set_page_config(page_title="My Streamlit Profile", layout="wide")
 
@@ -11,7 +14,7 @@ selected_tab = st.sidebar.selectbox("Select a tab", tabs)
 # Main content based on selected tab
 if selected_tab == "About":
     st.header("About")
-    st.image("profile_picture.jpg")  # Replace with your image path
+    st.image(base_path+"data/profile_picture.jpg")  # Replace with your image path
     st.write("Applied AI/ML | Machine Learning Researcher")
     st.write("Email: ranjan.rev@gmail.com | Phone: +91 6290153508")
     st.write("Website: https://ranjanz.github.io/")
