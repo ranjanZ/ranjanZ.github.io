@@ -249,7 +249,7 @@ elif selected_tab == "Blogs":
             "excerpt": "Coming....",
             "date": "2024-10-20",
             "author": "Ranjan M.",
-            "all content":Arbitrage ,
+            "all content":"Arbitrage" ,
         },
 
 
