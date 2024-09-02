@@ -145,7 +145,7 @@ def Arbitrage(st):
     st.write("when the parity value is far away from zero we can get grofit from it")
 
     st.write("Example: spot price 1628.65  fut 1633.45 parity is 2.696252(theoritical fut val - actual fut value), so fut is undervalues.  we can  buy fut  and sell spot.in some time it will be near diff will be near to zero, so we will close the position")
-    st.write("total profit: 2.62*lotsize=2.62*550=1441.0, total parital needd = 176240*2=352480, brokerage=₹1,690.42*2~3000. we have to check where we can excceed the brokerage")
+    st.write("total profit: 2.62*lotsize=2.62*550=1441.0, total capital needd = 176240*2=352480, brokerage=₹1,690.42*2~3000. we have to check where we can excceed the brokerage")
 
 
 
