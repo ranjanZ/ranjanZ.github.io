@@ -1,6 +1,5 @@
 import streamlit as st
 from blogs import *
-from utils import *
 
 base_path="https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/master/streamlit_page/"
 
