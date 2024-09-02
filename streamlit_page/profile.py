@@ -1,5 +1,6 @@
 import streamlit as st
 from blogs import *
+from utils import *
 
 base_path="https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/master/streamlit_page/"
 
@@ -51,6 +52,7 @@ body {
 """
 
 st.markdown("<style>" + css + "</style>", unsafe_allow_html=True)
+
 
 if selected_tab == "About":
     st.header("About")
@@ -115,18 +117,6 @@ if selected_tab == "About":
     # Display the talks and tutorials as bullet points with links
     for year, talk_type, topic, location, link in talks_and_tutorials:
         st.markdown(f"- **{year}**: {talk_type} on **{topic}** at **{location}** [Link]({link})")
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -259,7 +249,7 @@ elif selected_tab == "Blogs":
             "excerpt": "Coming....",
             "date": "2024-10-20",
             "author": "Ranjan M.",
-            "all content":"" ,
+            "all content":Arbitrage ,
         },
 
 
