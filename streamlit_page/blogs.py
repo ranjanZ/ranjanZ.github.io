@@ -1,7 +1,7 @@
 from utils import *
 
 
-base_path="https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/master/streamlit_page/
+base_path="https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/master/streamlit_page/"
 
 def blog_tensor_diff(st):
     st.write("""
