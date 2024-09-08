@@ -64,8 +64,8 @@ if selected_tab == "About":
 
     Beyond my professional pursuits, I'm fascinated by:
     - Entrepreneurship: Turning ideas into impact
-    - Algorithmic Trading: Where finance meets technology
-    - Robotics & Drones: Unleashing autonomous possibilities
+    - Algorithmic Trading
+    - Robotics & Drones
     """)
 
     # Links to profiles
@@ -75,22 +75,6 @@ if selected_tab == "About":
     [:github: GitHub](https://github.com/ranjanZ)
     """)
 
-
-
-
-
-
-    st.subheader("Beyond the Maths, Stats, and Code")
-    st.write(
-        """
-        - **My goal and Social Impact:** I believe that in India, the rich are getting richer while the poor are getting poorer, I want to reduce this gap. A farmer gives all his hard work to make the rich people richer, but they receive nothing. I am confident that I can make a positive change, even if it's only for a small percentage of our population.
-
-        - **Algorithmic Trading:** Where finance meets technology. I explore statistical arbitrage, backtesting, and finding an edge in the Indian market for derivatives as well as equity.
-
-        - **Robotics & Drones:** I love to play with drones and electronics.
-        - **Travelling:** Australia, Thailand, Porto.
-        """
-    )
 
     st.write("Let's connect and shape the future of AI/ML together!")
 
@@ -358,6 +342,20 @@ elif selected_tab == "My Story":
 
     """
     )
+
+
+
+    st.subheader("Beyond the Maths, Stats, and Code")
+    st.write(
+        """
+        - **My goal and Social Impact:** I believe that in India, the rich are getting richer while the poor are getting poorer, I want to reduce this gap. A farmer gives all his hard work to make the rich people richer, but they receive nothing. I am confident that I can make a positive change, even if it's only for a small percentage of our population.
+
+        - **Algorithmic Trading:** I explore statistical arbitrage, backtesting, and finding an edge in the Indian market for derivatives as well as equity.
+        - **Travelling:** "Thailand, France, Germany, Porugal, Australia, Jordan(upcoming..) "
+        """
+    )
+
+
 
 
 
