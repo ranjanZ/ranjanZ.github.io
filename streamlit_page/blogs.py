@@ -150,7 +150,6 @@ def Arbitrage(st):
 
 
 
-
 """
 def Classical_ML(st):
     st.header("Classical Machine Learning")
@@ -206,9 +205,6 @@ def Classical_ML(st):
     ######
     st.write("tranformer derivaition ")
     
-"""
-
-
 
     ##
     st.header("Liner Algebra")
@@ -231,7 +227,7 @@ def Classical_ML(st):
     2. RNN,LSTM,Transformer
     3. BERT, 
 
-
+"""
     
  
 
@@ -240,6 +236,12 @@ def Classical_ML(st):
 
 
  
+
+    
+    
+
+
+
 
 def project_blue(st):
     st.header("Project Blue: Algorithmic Trading in the Indian Stock Market")
@@ -247,65 +249,81 @@ def project_blue(st):
     Project Blue is an ambitious initiative aimed at developing, backtesting, and deploying algorithmic trading strategies in the Indian stock market. 
     The project focuses on leveraging advanced data analysis, machine learning, and real-time market data to create robust trading systems.
     """)
+    st.link_button("Project Blue", "https://github.com/ranjanZ/Blue")
+    st.link_button("Project Blue: option chain analysis", "https://github.com/ranjanZ/Blue/blob/main/web/analysis_code/option_chain_v2.py")
+    st.link_button("Project Blue: option and volume Divergence", "https://github.com/ranjanZ/Blue/tree/main/backtesting/backtest_options_v1/")
+    st.link_button("Project Blue: All backtesting including  backtrade and backtesting.py ", "https://github.com/ranjanZ/Blue/tree/main/backtesting/backtest_index/analysis/bt")
 
 
-    st.subheader("Project Timeline and Achievements")
+   
+    st.subheader("🚀 Project Timeline and Achievements")
     st.write("""
     Project Blue is a continuous journey with no end. It evolves as new challenges and opportunities arise in the market. 
     Below is the timeline of what has been accomplished so far and the roadmap for the future.
     """)
 
-    st.write("### 2023: Foundation and Exploration")
+    # Timeline with Icons and Catchy Headlines
+    st.write("### 📅 2023: Laying the Foundation")
     st.write("""
-    - **Understanding Equity, Futures, and Options**: Gained a deep understanding of how equity, futures, and options behave in the Indian stock market.
-    - **Live Data Extraction and Visualization**: Mastered live data extraction and visualization using libraries like Matplotlib, Dash, and Plotly.
-    - **Threading and Library Migration**: Implemented threading for efficient data processing and transitioned between libraries for better performance.
+    - **📊 Understanding Equity, Futures, and Options**: 
+      Gained a deep understanding of how equity, futures, and options behave in the Indian stock market.
+    - **📈 Live Data Extraction and Visualization**: 
+      Mastered live data extraction and visualization using libraries like Matplotlib, Dash, and Plotly.
+    - **⚙️ Threading and Library Migration**: 
+      Implemented threading for efficient data processing and transitioned between libraries for better performance.
     """)
 
-    st.write("### 2024: Building Tools and Analyzing Market Behavior")
+    st.write("### 🛠️ 2024: Building the Tools")
     st.write("""
-    - **Custom Library for Option Chain Analysis**: Developed a proprietary library for analyzing option chains, focusing on volume spread analysis and IV (Implied Volatility) anomalies in intraday trading.
-    - **Volume Spread Analysis**: Explored volume spread analysis to identify potential market movements.
-    - **IV Anomaly Detection**: Built tools to detect IV anomalies in real-time for intraday trading opportunities.
-    """)
-
-    st.write("### 2025: Strategy Development and Live Trading")
-    st.write("""
-    - **January 2025**: Explored Backtrader for strategy backtesting and optimization. Focused on pullback strategies and their performance in the Indian market.
-    - **February 2025**: Integrated Backtrader with the Fyers API for live trading. Developed a seamless pipeline for strategy execution in live markets.
-    - **March 2025**: Implemented live data fetching using TimeScaleDB for efficient storage and retrieval of real-time market data. Utilized Backtrader for live strategy implementation.
-    """)
-
-    st.subheader("Future Plans")
-    st.write("""
-    - **Advanced Machine Learning Models**: Incorporate machine learning models for predictive analytics and strategy optimization.
-    - **Multi-Asset Strategies**: Expand the scope to include multi-asset strategies, including commodities and currencies.
-    - **Cloud Deployment**: Deploy the trading system on the cloud for scalability and reliability.
-    - **Community and Collaboration**: Open-source parts of the project to collaborate with the trading community and contribute to the ecosystem.
-    """)
-
-    st.subheader("Key Technologies Used")
-    st.write("""
-    - **Python**: Primary programming language for data analysis, strategy development, and backtesting.
-    - **Backtrader**: Backtesting and live trading framework.
-    - **Fyers API**: Brokerage API for live trading in the Indian market.
-    - **TimeScaleDB**: Database for efficient storage and retrieval of time-series market data.
-    - **Matplotlib, Dash, Plotly**: Visualization libraries for market data and strategy performance.
-    - **Machine Learning**: For predictive analytics and strategy optimization.
-    """)
-
-    st.subheader("Conclusion")
-    st.write("""
-    Project Blue is a continuous journey of learning, experimentation, and innovation. 
-    The goal is to build a robust, scalable, and profitable algorithmic trading system tailored to the Indian stock market. 
-    With each milestone, we move closer to achieving this vision.
+    - **🔧 Custom Library for Option Chain Analysis**: 
+      Developed a proprietary library for analyzing option chains, focusing on volume spread analysis and IV (Implied Volatility) anomalies in intraday trading.
+    - **📉 Volume Spread Analysis**: 
+      Explored volume spread analysis to identify potential market movements and hidden trends.
+    - **📊 IV Anomaly Detection**: 
+      Built tools to detect IV anomalies in real-time for intraday trading opportunities.
     """)
 
 
-    
-    
+    # Vertical Timeline with Circles and Lines
+    st.write("### 2025 Timeline")
+
+    # Define the timeline data
+    milestones = [
+        {"date": "January 2025", "description": "Explored Backtrader for strategy backtesting and optimization."},
+        {"date": "February 2025", "description": "Integrated Backtrader with Fyers API for live trading."},
+        {"date": "March 2025", "description": "Implemented live data fetching using TimeScaleDB. Intregrate historical Option data."},
+        {"date": "April 2025", "description": "Backtesting and finding Alpha, Target: low drawdown high harge ratio. Use option Selling methods"},
+        {"date": "May 2025", "description": "Kedernath Jatra: deploy on paper trading, ingtregate live order"},
+
+    ]
 
 
+    # Create a vertical timeline
+    for i, milestone in enumerate(milestones):
+        # Create columns for the timeline
+        col1, col2, col3 = st.columns([0.01, 1, 8])  # Adjusted column widths for left alignment
+
+        # Circle (Unicode character)
+        with col1:
+            st.write("")  # Empty space for alignment
+
+        with col2:
+            st.markdown(f"<div style='text-align: center; font-size: 24px;'>●</div>", unsafe_allow_html=True)
+
+        # Milestone description (larger text)
+        with col3:
+            st.markdown(f"<div style='font-size: 18px;'><b>{milestone['date']}</b></div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='font-size: 16px;'>{milestone['description']}</div>", unsafe_allow_html=True)
+
+        # Add a vertical line between milestones (Unicode character)
+        if i < len(milestones) - 1:
+            col1, col2, col3 = st.columns([0.01, 1, 8])
+            with col1:
+                st.write("")  # Empty space for alignment
+            with col2:
+                st.markdown("<div style='text-align: center; font-size: 24px;'>│</div>", unsafe_allow_html=True)
+            with col3:
+                st.write(" ")  # Empty space for alignment
 
 
 
