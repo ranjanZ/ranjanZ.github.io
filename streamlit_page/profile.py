@@ -53,6 +53,7 @@ body {
 st.markdown("<style>" + css + "</style>", unsafe_allow_html=True)
 
 
+
 if selected_tab == "About":
     st.header("About")
     st.image(base_path + "data/profile_picture1.jpg",width=300)  # Replace with your image path
@@ -68,12 +69,17 @@ if selected_tab == "About":
     - Robotics & Drones
     """)
 
-    # Links to profiles
-    st.write("""
-    [:linkedin: LinkedIn]((https://www.linkedin.com/in/ranjan-mondal-176b0362/))
-    [:google-scholar: Google Scholar](https://scholar.google.com/citations?user=JWuX_HsAAAAJ&hl=en)
-    [:github: GitHub](https://github.com/ranjanZ)
-    """)
+    st.markdown("""
+**Social Links**
+
+<a href="https://www.linkedin.com/in/ranjan-mondal-176b0362/" target="_blank" class="d-flex align-items-center"><i class="fab fa-linkedin"></i> LinkedIn</a>
+
+<a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ&hl=en" target="_blank" class="d-flex align-items-center"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+
+<a href="https://github.com/ranjanZ" target="_blank" class="d-flex align-items-center"><i class="fab fa-github"></i> GitHub</a>
+""", unsafe_allow_html=True)
+
+
 
 
     st.write("Let's connect and shape the future of AI/ML together!")
@@ -234,6 +240,16 @@ elif selected_tab == "Blogs":
             "author": "Ranjan M.",
             "all content":Arbitrage ,
         },
+
+         {
+            "title": "Project Blue: Where there is no end",
+            "excerpt": "Don't Click",
+            "date": "2025-03-18",
+            "author": "Ranjan M.",
+            "all content":project_blue ,
+        },
+
+
 
 
     ]
