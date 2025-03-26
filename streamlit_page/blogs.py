@@ -291,8 +291,8 @@ def project_blue(st):
     milestones = [
         {"date": "January 2025", "description": "Explored Backtrader for strategy backtesting and optimization."},
         {"date": "February 2025", "description": "Integrated Backtrader with Fyers API for live trading."},
-        {"date": "March 2025", "description": "Implemented live data fetching using TimeScaleDB. Intregrate historical Option data."},
-        {"date": "April 2025", "description": "Backtesting and finding Alpha, Target: low drawdown high harge ratio. Use option Selling methods"},
+        {"date": "March 2025", "description": "Implemented live data fetching using TimeScaleDB. data fetching is saperate process done by time scale db. need tt run the process from cerebro. Intregrate historical Option data manement, storing effieciently weekly and monthly expiry data. ploty,dash for live data  and orders visulization,data sharing by redishserver over the process.separate process for visualization so that it does not efect the strategy computation.indicator intregration will be done later" }, 
+        {"date": "April 2025", "description": "Backtesting and finding Alpha, Target: low drawdown target  sharpe ratio  of >2. Use option Selling methods"},
         {"date": "May 2025", "description": "Kedernath Jatra: deploy on paper trading, ingtregate live order"},
 
     ]
