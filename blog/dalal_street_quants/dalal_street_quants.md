@@ -29,7 +29,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
    🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/dsq_grid_strategy.exe)
 2. Create an **empty folder** and keep the Algo Bot there
 
-3 Download sample  `user_config` from  🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/user_config.txt)  
+3. Download sample  `user_config` from  🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/user_config.txt)  
    *If download doesn't start automatically, right-click and select "Save link as..."*
 	
    - Update your user id, password and sample
