@@ -21,7 +21,7 @@
    - User ID
    - Password
    - Server (at MetaTrader 5)
-3. Send your **ID, NAME, and broker** to Telegram channel *(wait for few minutes)*
+3. Send your **ID, NAME, and broker** to dalal street quants Telegram channel: https://t.me/+diyR-ERuurk1Mzhl *(wait for few minutes)*
 4. Search for **XAUUSD** in watch list and open chart
 
 ### Step 2: Download the Algo Bot
