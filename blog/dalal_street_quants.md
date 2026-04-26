@@ -14,25 +14,27 @@
 
 ## Setup Steps
 
-### Step 1: Download MT5
-
-### Step 2: Login to MT5 Account
-1. Login to your MT5 account using your:
+### Step 1: Download and Login to MT5
+1. **Download MT5** from the official website:  
+   🔗 https://www.metatrader5.com/en/download
+2. Login to your MT5 account using your:
    - User ID
    - Password
    - Server (at MetaTrader 5)
-2. Send your **ID, NAME, and broker** to Telegram channel *(wait for few minutes)*
-3. Search for **XAUUSD** in watch list and open chart
+3. Send your **ID, NAME, and broker** to Telegram channel *(wait for few minutes)*
+4. Search for **XAUUSD** in watch list and open chart
 
-### Step 3: Download the Algo Bot
-1. Create an **empty folder** and keep the Algo Bot there
-2. Create a text file named `user_config`
-3. Write the following in first three rows (one per line):
+### Step 2: Download the Algo Bot
+1. **Download the Algo Bot** from:  
+   🔗 https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/refs/heads/master/blog/dalal_street_quants.md
+2. Create an **empty folder** and keep the Algo Bot there
+3. Create a text file named `user_config`
+4. Write the following in first three rows (one per line):
    - Row 1: Username
    - Row 2: Password
    - Row 3: Server name
 
-### Step 4: Run the Algo Bot
+### Step 3: Run the Algo Bot
 - Double-click on the Algo Bot application — it will run automatically
 
 ---
@@ -71,3 +73,5 @@ For **Real account**, you need to add the partner code to use the **Advanced Gri
 - Hedging
 - Trailing SL (Stop Loss)
 - Risk management
+
+
