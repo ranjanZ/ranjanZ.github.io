@@ -1,13 +1,13 @@
-# Dalal Street Quants || Grid Trading Space
+# Dalal Street Quants || Grid Trading Space 
+Youtube Channel: https://www.youtube.com/@Dalal_street_quants
+
+
 
 ## Requirements for Running in Demo/Real Account
-
 ### Forex Broker (Recommended)
 - **Vantage** (Recommended) or XM or Excess
 - Vantage → Cent account (leverage 1:2000)
 - Minimum fund required: **10000 INR**
-
-##e System Requirements
 - Windows OS or Linux Machine 
 
 ---
@@ -26,16 +26,15 @@
 
 ### Step 2: Download the Algo Bot
 1. **Download the Algo Bot**:  
-   🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/grid_strategy.exe)
+   🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/dsq_grid_strategy.exe)
 2. Create an **empty folder** and keep the Algo Bot there
-3. Create a text file named `user_config`
-4. Write the following in first three rows (one per line):
-   - Row 1: Username
-   - Row 2: Password
-   - Row 3: Server name
+3. download sample  `user_config` from [here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/user_config.txt)
+	- Update your user id, password and sample
+
 
 ### Step 3: Run the Algo Bot
 - Double-click on the Algo Bot application — it will run automatically
+- Enjoy
 
 ---
 
