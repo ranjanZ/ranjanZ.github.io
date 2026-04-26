@@ -1,23 +1,23 @@
 # Dalal Street Quants || Grid Trading Space
 
-## Requirements for Running in Demo Account
+## Requirements for Running in Demo/Real Account
 
 ### Forex Broker (Recommended)
 - **Vantage** (Recommended) or XM or Excess
 - Vantage → Cent account (leverage 1:2000)
 - Minimum fund required: **10000 INR**
 
-### System Requirements
-- Windows OS
+##e System Requirements
+- Windows OS or Linux Machine 
 
 ---
 
-## Setup Steps
+## Setup Steps[Windows Machine]
 
 ### Step 1: Download and Login to MT5
 1. **Download MT5** from the official website:  
    🔗 https://www.metatrader5.com/en/download
-2. Login to your MT5 account using your:
+2. Login to your broker MT5 account using your:
    - User ID
    - Password
    - Server (at MetaTrader 5)
@@ -25,8 +25,8 @@
 4. Search for **XAUUSD** in watch list and open chart
 
 ### Step 2: Download the Algo Bot
-1. **Download the Algo Bot** from:  
-   🔗 https://raw.githubusercontent.com/ranjanZ/ranjanZ.github.io/refs/heads/master/blog/dalal_street_quants.md
+1. **Download the Algo Bot**:  
+   🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/grid_strategy.exe)
 2. Create an **empty folder** and keep the Algo Bot there
 3. Create a text file named `user_config`
 4. Write the following in first three rows (one per line):
@@ -47,12 +47,12 @@
 | Vantage | `VcM6U1DW` |
 
 ### Create New Account Using Link
+- **Vantage**: [Create Account](https://vigco.co/la-com-inv/VcM6U1DW)
+- **XM**: [Create Account](https://affs.click/mvjlf)
 
-- **Vantage**: https://vigco.co/la-com-inv/VcM6U1DW
-- **XM**: https://affs.click/mvjlf
+
 
 ---
-
 ## Troubleshooting
 
 ### Issue: Application closes instantly
@@ -69,9 +69,11 @@
 
 ⚠️ **Always test on Demo account first before using Real account.**
 
+
 For **Real account**, you need to add the partner code to use the **Advanced Grid Bot** which includes:
 - Hedging
 - Trailing SL (Stop Loss)
 - Risk management
+- others 
 
 
