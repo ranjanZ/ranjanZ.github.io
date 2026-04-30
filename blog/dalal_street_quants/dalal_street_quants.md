@@ -21,7 +21,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
    - User ID
    - Password
    - Server (at MetaTrader 5)
-3. Send your **ID, NAME, and broker** to dalal street quants [Telegram channel] (https://t.me/+diyR-ERuurk1Mzhl) (wait for few minutes for attching licence to your account ID)*
+3. Send your **ID, NAME, and broker** to dalal street quants [Telegram channel](https://t.me/+diyR-ERuurk1Mzhl) (wait for few minutes for attching licence to your account ID)*
 	--or you can text me directly at telegram channel 
 4. Search for **XAUUSD** in watch list and open chart
 
@@ -56,7 +56,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 	- Allow Algorithmic Trading 
 	- Allow Web Request for Listed URL -> add https://raw.githubusercontent.com
 
-4. Send your **ID, NAME, and broker** to dalal street quants [Telegram channel] (https://t.me/+diyR-ERuurk1Mzhl) *(wait for few minutes for confirmation)*
+4. Send your **ID, NAME, and broker** to dalal street quants [Telegram channel](https://t.me/+diyR-ERuurk1Mzhl) *(wait for few minutes for confirmation)*
         -You can text me directly at telegram channel(preferable)
 
 
