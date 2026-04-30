@@ -12,7 +12,8 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 
 ---
 
-## Setup Steps[Windows Machine][Option 1 more features]
+#Option 1 [more features]
+## Setup Steps[Windows Machine]
 
 ### Step 1: Download and Login to MT5
 1. **Download MT5** from the official website:  
@@ -44,7 +45,8 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 
 
 
-## Setup Steps[Windows Machine][Option 2 Restricted features]
+#Option 2 Through Expert Advisors[Restricted features]
+## Setup Steps[Windows Machine ]
 ### Step 1: Download and Login to MT5
 1. **Download MT5** from the official website:
    🔗 https://www.metatrader5.com/en/download
@@ -60,7 +62,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 
 ### Step 2: Download the Algo Bot
 1. **Download the Expert Advisor Algo Bot**:
-   🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/dsq_grid_strategy.exe)
+   🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/DSQ_EA/dsq_v1.ex5)
 2. Double Click on the bot 
 
 
