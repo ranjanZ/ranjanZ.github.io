@@ -47,7 +47,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 # Option 2 Through Expert Advisors[Restricted features]
 ## Setup Steps[Windows Machine ]
 ### Step 1: Download and Login to MT5
-1. **Download MT5** from the official website: [here] (https://www.metatrader5.com/en/download)
+1. **Download MT5** from the official website: [here](https://www.metatrader5.com/en/download)
 2. Login to your broker MT5 account using your:
    - User ID
    - Password
