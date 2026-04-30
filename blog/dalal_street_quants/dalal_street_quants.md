@@ -16,13 +16,12 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 ## Setup Steps[Windows Machine]
 
 ### Step 1: Download and Login to MT5
-1. **Download MT5** from the official website:  
-   🔗 https://www.metatrader5.com/en/download
+1. **Download MT5** from the official website: [here](https://www.metatrader5.com/en/download)
 2. Login to your broker MT5 account using your:
    - User ID
    - Password
    - Server (at MetaTrader 5)
-3. Send your **ID, NAME, and broker** to dalal street quants Telegram channel: https://t.me/+diyR-ERuurk1Mzhl *(wait for few minutes)*
+3. Send your **ID, NAME, and broker** to dalal street quants [Telegram channel] (https://t.me/+diyR-ERuurk1Mzhl) (wait for few minutes for attching licence to your account ID)*
 	--or you can text me directly at telegram channel 
 4. Search for **XAUUSD** in watch list and open chart
 
@@ -48,31 +47,33 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 # Option 2 Through Expert Advisors[Restricted features]
 ## Setup Steps[Windows Machine ]
 ### Step 1: Download and Login to MT5
-1. **Download MT5** from the official website:
-   🔗 https://www.metatrader5.com/en/download
+1. **Download MT5** from the official website: [here] (https://www.metatrader5.com/en/download)
 2. Login to your broker MT5 account using your:
    - User ID
    - Password
    - Server (at MetaTrader 5)
-3. Go to Metarader Tools-> Allow Web Request for Listed URL -> add https://raw.githubusercontent.com
+3. Go to Metarader Tools
+	- Allow Algorithmic Trading 
+	- Allow Web Request for Listed URL -> add https://raw.githubusercontent.com
 
-4. Send your **ID, NAME, and broker** to dalal street quants Telegram channel: https://t.me/+diyR-ERuurk1Mzhl *(wait for few minutes for confirmation)*
-        --or you can text me directly at telegram channel(preferable)
+4. Send your **ID, NAME, and broker** to dalal street quants [Telegram channel] (https://t.me/+diyR-ERuurk1Mzhl) *(wait for few minutes for confirmation)*
+        -You can text me directly at telegram channel(preferable)
 
 
 ### Step 2: Download the Algo Bot
 1. **Download the Expert Advisor Algo Bot**:
    🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/DSQ_EA/dsq_v1.ex5)
-2. Double Click on the bot 
+2. Double Click on the bot expert advisor dsq_v1 will be added to the Metatrader
+	- go to experts[right pannel]  double click on dsq_v1 it will srtart running. 
 
 
 
 
  
 
+---
 
-
-## Partner Code (for Real Account)
+## Partner Code (for bot version V2 and V3)
 
 | Broker | Partner Code |
 |--------|--------------|
@@ -103,10 +104,11 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 ⚠️ **Always test on Demo account first before using Real account.**
 
 
-For **Real account**, you need to add the partner code to use the **Advanced Grid Bot** which includes:
+For **V2 and V3 version Bot**, you need to add the partner code to use the **Advanced Grid Bot** which includes:
 - Hedging
 - Trailing SL (Stop Loss)
 - Risk management
 - others 
 
+I will Set up every week a live video call 1 hour session for Setting up bot at your machine for Free
 
