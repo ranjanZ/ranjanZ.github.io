@@ -12,7 +12,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 
 ---
 
-## Setup Steps[Windows Machine]
+## Setup Steps[Windows Machine][Option 1 more features]
 
 ### Step 1: Download and Login to MT5
 1. **Download MT5** from the official website:  
@@ -22,6 +22,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
    - Password
    - Server (at MetaTrader 5)
 3. Send your **ID, NAME, and broker** to dalal street quants Telegram channel: https://t.me/+diyR-ERuurk1Mzhl *(wait for few minutes)*
+	--or you can text me directly at telegram channel 
 4. Search for **XAUUSD** in watch list and open chart
 
 ### Step 2: Download the Algo Bot
@@ -40,6 +41,34 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 - Enjoy
 
 ---
+
+
+
+## Setup Steps[Windows Machine][Option 2 Restricted features]
+### Step 1: Download and Login to MT5
+1. **Download MT5** from the official website:
+   🔗 https://www.metatrader5.com/en/download
+2. Login to your broker MT5 account using your:
+   - User ID
+   - Password
+   - Server (at MetaTrader 5)
+3. Go to Metarader Tools-> Allow Web Request for Listed URL -> add https://raw.githubusercontent.com
+
+4. Send your **ID, NAME, and broker** to dalal street quants Telegram channel: https://t.me/+diyR-ERuurk1Mzhl *(wait for few minutes for confirmation)*
+        --or you can text me directly at telegram channel(preferable)
+
+
+### Step 2: Download the Algo Bot
+1. **Download the Expert Advisor Algo Bot**:
+   🔗 [Download here](https://github.com/ranjanZ/ranjanZ.github.io/raw/refs/heads/master/blog/dalal_street_quants/dsq_grid_strategy.exe)
+2. Double Click on the bot 
+
+
+
+
+ 
+
+
 
 ## Partner Code (for Real Account)
 
