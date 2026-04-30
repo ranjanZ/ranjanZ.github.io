@@ -12,7 +12,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 
 ---
 
-#Option 1 [more features]
+# Option 1 [more features]
 ## Setup Steps[Windows Machine]
 
 ### Step 1: Download and Login to MT5
@@ -45,7 +45,7 @@ Youtube Channel: https://www.youtube.com/@Dalal_street_quants
 
 
 
-#Option 2 Through Expert Advisors[Restricted features]
+# Option 2 Through Expert Advisors[Restricted features]
 ## Setup Steps[Windows Machine ]
 ### Step 1: Download and Login to MT5
 1. **Download MT5** from the official website:
