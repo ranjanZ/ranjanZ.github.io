@@ -19,19 +19,26 @@ venv/
 .env.local
 .env.*
 
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
 # Build directories
 dist/
 build/
 target/
-*.log
-*.tmp
-*.swp
+*.jar
+*.war
+*.zip
+*.tar.gz
 
 # Editors
 .vscode/
 .idea/
 
-# OS
+# System files
 .DS_Store
 Thumbs.db
 
@@ -41,17 +48,13 @@ htmlcov/
 .coverage
 
 # Python specific
-*.pyc
-__pycache__/
 *.pyo
 *.pyd
+*.egg-info/
 .Python
 *.so
-*.egg-info/
-.eggs/
 
 # Compressed files
-*.zip
 *.gz
 *.tar
 *.tgz
@@ -69,9 +72,7 @@ __pycache__/
 *.Z
 *.lz
 *.lzo
-
-# Caching
-.mypy_cache/
-.pytest_cache/
-.gradle/
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
