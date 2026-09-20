@@ -3,1057 +3,768 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Ranjan Mondal - Machine Learning & AI Research</title>
+    <title>Ranjan Mondal | Industry Professor & AI Researcher</title>
+    <meta name="description" content="Curriculum Vitae and Research Portfolio of Ranjan Mondal, specializing in Deep Learning, Graph ML, and LLMs.">
+    
+    <!-- Fonts: Inter for UI, Merriweather for Headings (Classic Academic Look) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --primary-color: #003366;
-            --secondary-color: #8B0000;
-            --accent-color: #DAA520;
-            --text-color: #2c3e50;
-            --light-bg: #f8f9fa;
-            --border-color: #dee2e6;
-            --sidebar-width: 280px;
+            --primary-color: #0f172a; /* Slate 900 - Deep Academic Blue */
+            --accent-color: #b91c1c; /* Crimson Red - Classic University Accent */
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-color: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border-color: #e2e8f0;
+            --container-width: 1000px;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-color);
         }
 
-        .container {
-            display: flex;
-            min-height: 100vh;
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            font-weight: 700;
         }
 
-        /* Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: linear-gradient(135deg, var(--primary-color) 0%, #001f3f 100%);
-            color: white;
-            padding: 40px 30px;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            left: 0;
-            top: 0;
-        }
-
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--accent-color);
-            margin: 0 auto 25px;
-            display: block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .sidebar h1 {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .sidebar .title {
-            text-align: center;
-            font-size: 14px;
-            color: #bdc3c7;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        .contact-info {
-            margin-top: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 13px;
-        }
-
-        .contact-item i {
-            width: 25px;
-            color: var(--accent-color);
-            margin-right: 10px;
-        }
-
-        .contact-item a {
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: var(--accent-color);
-        }
-
-        .social-links {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-left: var(--sidebar-width);
-            flex: 1;
-            padding: 0;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #001f3f 100%);
-            color: white;
-            padding: 60px 80px;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-size: 30px 30px;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        .hero .affiliation {
-            font-size: 18px;
-            color: #bdc3c7;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .hero .tagline {
-            font-size: 16px;
-            max-width: 700px;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        /* Navigation */
-        .nav-bar {
-            background: white;
-            border-bottom: 3px solid var(--accent-color);
-            padding: 0 80px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-bar nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-bar a {
+        a {
             color: var(--primary-color);
             text-decoration: none;
-            padding: 20px 0;
-            font-weight: 600;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s;
+            transition: color 0.2s ease;
         }
 
-        .nav-bar a:hover,
-        .nav-bar a.active {
-            border-bottom-color: var(--accent-color);
-            color: var(--secondary-color);
+        a:hover {
+            color: var(--accent-color);
         }
 
-        /* Sections */
-        section {
-            padding: 60px 80px;
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            padding: 80px 0 60px;
             border-bottom: 1px solid var(--border-color);
         }
 
-        section:nth-child(even) {
-            background-color: var(--light-bg);
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-bio {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            color: var(--text-main);
+            max-width: 700px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-light);
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+            object-fit: cover;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
         }
 
         .section-title {
-            font-size: 32px;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--accent-color);
-            display: inline-block;
-            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
 
         /* News Section */
-        .news-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: white;
-            border-left: 4px solid var(--accent-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+        .news-list {
+            list-style: none;
         }
 
-        .news-item:hover {
-            transform: translateX(5px);
+        .news-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: baseline;
         }
 
         .news-date {
-            min-width: 120px;
+            font-family: 'Inter', sans-serif;
             font-weight: 600;
-            color: var(--secondary-color);
-            font-size: 14px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            white-space: nowrap;
         }
 
         .news-content {
-            flex: 1;
+            border-left: 2px solid var(--border-color);
+            padding-left: 20px;
+            padding-bottom: 20px;
         }
 
-        .news-content h4 {
-            color: var(--primary-color);
-            margin-bottom: 8px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .news-content p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .news-badge {
+        .news-tag {
             display: inline-block;
-            padding: 3px 10px;
-            background: var(--accent-color);
-            color: white;
-            font-size: 11px;
-            border-radius: 3px;
-            margin-left: 10px;
+            font-size: 0.75rem;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            background-color: var(--bg-secondary);
+            color: var(--primary-color);
         }
+
+        .news-tag.talk { background-color: #e0f2fe; color: #0369a1; }
+        .news-tag.award { background-color: #fef3c7; color: #b45309; }
+        .news-tag.research { background-color: #dcfce7; color: #15803d; }
+        .news-tag.news { background-color: #f3e8ff; color: #7e22ce; }
 
         /* Research Areas */
         .research-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .research-card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--primary-color);
+            background: var(--bg-secondary);
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease;
         }
 
         .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
         }
 
         .research-card i {
-            font-size: 36px;
+            font-size: 1.5rem;
             color: var(--accent-color);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .research-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 20px;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-family: 'Inter', sans-serif;
             font-weight: 600;
         }
 
         .research-card p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.8;
+            font-size: 0.95rem;
+            color: var(--text-light);
         }
 
         /* Publications */
-        .publication {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--primary-color);
+        .pub-list {
+            list-style: none;
         }
 
-        .publication-title {
-            font-size: 16px;
+        .pub-item {
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 15px;
+        }
+
+        .pub-year {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-family: 'Merriweather', serif;
+        }
+
+        .pub-details {
+            font-size: 1rem;
+        }
+
+        .pub-title {
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 10px;
+            display: block;
+            margin-bottom: 4px;
         }
 
-        .publication-authors {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 8px;
+        .pub-authors {
+            color: var(--text-main);
             font-style: italic;
         }
 
-        .publication-venue {
-            font-size: 14px;
-            color: var(--secondary-color);
-            font-weight: 600;
-            margin-bottom: 8px;
+        .pub-venue {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 4px;
         }
 
-        .publication-links {
+        .pub-links {
+            margin-top: 6px;
+            font-size: 0.85rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        .pub-links a {
+            margin-right: 12px;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 30px;
+        }
+
+        .exp-header {
             display: flex;
-            gap: 15px;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .exp-role {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .exp-company {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .exp-date {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .exp-desc {
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .exp-desc ul {
+            margin-left: 20px;
             margin-top: 10px;
         }
 
-        .publication-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
-        }
-
-        .publication-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .citation-count {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 12px;
-            margin-left: 10px;
+        .exp-desc li {
+            margin-bottom: 6px;
         }
 
         /* Blog Section */
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .blog-post {
-            background: white;
-            border-radius: 8px;
+        .blog-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: box-shadow 0.2s ease;
         }
 
-        .blog-post:hover {
-            transform: translateY(-5px);
+        .blog-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
-        .blog-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #001f3f 100%);
-            color: white;
-            padding: 20px 25px;
-        }
-
-        .blog-date {
-            font-size: 13px;
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-
-        .blog-title {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .blog-body {
+        .blog-content {
             padding: 25px;
         }
 
-        .blog-body p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.8;
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .blog-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
             margin-bottom: 15px;
         }
 
-        .blog-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .blog-tag {
-            background: var(--light-bg);
-            color: var(--primary-color);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            border: 1px solid var(--border-color);
-        }
-
         .read-more {
-            display: inline-block;
-            color: var(--secondary-color);
-            text-decoration: none;
+            font-size: 0.85rem;
             font-weight: 600;
-            font-size: 14px;
-            margin-top: 15px;
-            transition: color 0.3s;
-        }
-
-        .read-more:hover {
             color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Footer */
         footer {
-            background: var(--primary-color);
-            color: white;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 0;
             text-align: center;
-            padding: 40px 80px;
+            font-size: 0.9rem;
         }
 
-        footer p {
-            opacity: 0.8;
-            font-size: 14px;
+        footer a {
+            color: #cbd5e1;
+        }
+
+        footer a:hover {
+            color: #fff;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                padding: 30px 20px;
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-img {
+                margin: 0 auto;
             }
 
-            .main-content {
-                margin-left: 0;
+            .contact-links {
+                justify-content: center;
             }
 
-            .hero, section, .nav-bar, footer {
-                padding-left: 20px;
-                padding-right: 20px;
+            .news-item {
+                grid-template-columns: 1fr;
+                gap: 5px;
             }
 
-            .nav-bar nav {
-                flex-wrap: wrap;
-                gap: 15px;
+            .news-content {
+                border-left: none;
+                padding-left: 0;
+                padding-top: 5px;
+            }
+
+            .pub-item {
+                grid-template-columns: 1fr;
+            }
+            
+            .pub-year {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="profile-photo">RM</div>
-            <h1>Ranjan Mondal, PhD</h1>
-            <p class="title">Professor of Machine Learning & AI<br><em>(Visiting Scholar)</em></p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Bangalore, India</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 6290153508</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:ranjan.rev@gmail.com">ranjan.rev@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <a href="https://ranjanz.github.io" target="_blank">ranjanz.github.io</a>
-                </div>
-            </div>
 
-            <div class="social-links">
-                <a href="https://github.com/ranjanZ" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ranjan-mondal-176b0362" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://dblp.org" target="_blank" title="DBLP"><i class="fas fa-book"></i></a>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Hero Section -->
-            <div class="hero">
-                <div class="hero-content">
-                    <h2>Ranjan Mondal, PhD</h2>
-                    <p class="affiliation">Department of Computer Science & Engineering | Machine Learning Research Laboratory</p>
-                    <p class="tagline">
-                        Leading research in Deep Learning, Graph Neural Networks, Large Language Models, and Retrieval-Augmented Generation systems. 
-                        Bridging theoretical foundations with real-world AI applications in finance, computer vision, and natural language processing.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="nav-bar">
-                <nav>
-                    <a href="#news" class="active">News</a>
-                    <a href="#research">Research</a>
-                    <a href="#publications">Publications</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#talks">Talks</a>
-                    <a href="#awards">Awards</a>
-                </nav>
-            </div>
-
-            <!-- News Section -->
-            <section id="news">
-                <h2 class="section-title">Latest News</h2>
+    <header>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Ranjan Mondal</h1>
+                <div class="hero-title">Industry Professor & Senior AI Researcher</div>
                 
-                <div class="news-item">
-                    <div class="news-date">February 2025</div>
-                    <div class="news-content">
-                        <h4>Invited Talk at National Workshop on LLMs & Agentic AI <span class="news-badge">Invited Talk</span></h4>
-                        <p>Delivered an invited talk on "LLM Fine-Tuning: From Transformers to DPO" at Chandigarh University, covering SFT, PEFT, RLHF, PPO, and DPO techniques.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">January 2025</div>
-                    <div class="news-content">
-                        <h4>Retrieval Platform Deployment <span class="news-badge">Industry Impact</span></h4>
-                        <p>Successfully deployed scalable Retrieval-as-a-Service platform at JP Morgan Chase, serving multiple high-impact business use cases with sub-second latency.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">July 2024</div>
-                    <div class="news-content">
-                        <h4>SERB Sponsored Workshop Keynote <span class="news-badge">Keynote</span></h4>
-                        <p>Presented keynote address on "Deep Learning: Foundation to Cutting Edge Technologies" at UPES, Dehradun, sponsored by Science and Engineering Research Board.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">June 2024</div>
-                    <div class="news-content">
-                        <h4>Agentic RAG System Launch <span class="news-badge">Research</span></h4>
-                        <p>Launched novel agentic RAG framework for legal contract analysis achieving 2-4s latency on CUAD/MAUD/ContractNLI benchmarks.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">March 2024</div>
-                    <div class="news-content">
-                        <h4>Graph RAG Integration <span class="news-badge">Innovation</span></h4>
-                        <p>Integrated Graph RAG capabilities into retrieval platform using spaCy-based entity resolution and community-based dense retrieval.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Research Section -->
-            <section id="research">
-                <h2 class="section-title">Research Areas</h2>
-                
-                <div class="research-grid">
-                    <div class="research-card">
-                        <i class="fas fa-brain"></i>
-                        <h3>Large Language Models</h3>
-                        <p>Advanced research in LLM fine-tuning, including SFT, PEFT, RLHF, PPO, and DPO. Developing efficient methods for domain adaptation and instruction tuning of foundation models.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Graph Machine Learning</h3>
-                        <p>Pioneering work in Graph Neural Networks for financial modeling, peer identification, and anomaly detection. Scaling GNN systems to process 400M+ multi-modal records.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-search"></i>
-                        <h3>Retrieval & RAG Systems</h3>
-                        <p>Building next-generation retrieval-augmented generation systems with hybrid retrieval (dense + BM25 + SPLADE), multi-level caching, and agentic reasoning capabilities.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-eye"></i>
-                        <h3>Computer Vision</h3>
-                        <p>Deep learning approaches for video panoptic segmentation, image dehazing, de-raining, and anomaly detection. Morphological neural networks for robust visual understanding.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Quantitative Trading</h3>
-                        <p>Applying ML to financial markets through automated trading strategies, backtesting platforms, and real-time market analysis using agentic frameworks.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-robot"></i>
-                        <h3>Reinforcement Learning</h3>
-                        <p>Developing RL algorithms for decision-making in complex environments, including multi-agent systems and reward optimization for LLM alignment.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Publications Section -->
-            <section id="publications">
-                <h2 class="section-title">Selected Publications</h2>
-                
-                <div class="publication">
-                    <div class="publication-title">Morphological network: How far can we go with morphological neurons?</div>
-                    <div class="publication-authors">Ranjan Mondal, Sanchayan Santra, Soumendu Sundar Mukherjee, and Bhabatosh Chanda</div>
-                    <div class="publication-venue">British Machine Vision Conference (BMVC), 2022</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#"><i class="fas fa-code"></i> Code</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Morphological convolutional neural networks for hyperspectral image classification</div>
-                    <div class="publication-authors">Swalpa Kumar Roy, Ranjan Mondal, Mercedes E Paoletti, Juan M Haut, and Antonio Plaza</div>
-                    <div class="publication-venue">IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, Vol. 14, pp. 8689–8702, 2021</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> DOI</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Learning 2d morphological network for old document image binarization</div>
-                    <div class="publication-authors">Ranjan Mondal, Deepayan Chakraborty, and Bhabatosh Chanda</div>
-                    <div class="publication-venue">15th IAPR International Conference on Document Analysis and Recognition (ICDAR), IEEE, 2019</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#"><i class="fas fa-code"></i> Code</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Image restoration by learning morphological opening-closing network</div>
-                    <div class="publication-authors">Ranjan Mondal, Moni Shankar Dey, and Bhabatosh Chanda</div>
-                    <div class="publication-venue">Mathematical Morphology - Theory and Applications, DE GRUYTER, 2019</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> DOI</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Morphological networks for image de-raining</div>
-                    <div class="publication-authors">Ranjan Mondal, Pulak Purkait, Sanchayan Santra, and Bhabatosh Chanda</div>
-                    <div class="publication-venue">International Conference on Discrete Geometry for Computer Imagery, Springer, pp. 262–275, 2019</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/ranjanZ/2D-Morphological-Network" target="_blank"><i class="fas fa-code"></i> Code</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Image dehazing by joint estimation of transmittance and airlight using bi-directional consistency loss minimized fcn</div>
-                    <div class="publication-authors">Ranjan Mondal, Sanchayan Santra, and Bhabatosh Chanda</div>
-                    <div class="publication-venue">IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPR-W), pp. 920–928, 2018</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/ranjanZ/CVPR2018_Dehazing" target="_blank"><i class="fas fa-code"></i> Code</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Learning a patch quality comparator for single image dehazing</div>
-                    <div class="publication-authors">Sanchayan Santra, Ranjan Mondal, and Bhabatosh Chanda</div>
-                    <div class="publication-venue">IEEE Transactions on Image Processing, Vol. 27, No. 9, 2018</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> DOI</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Anomaly detection using context dependent optical flow</div>
-                    <div class="publication-authors">Ranjan Mondal and Bhabatosh Chanda</div>
-                    <div class="publication-venue">Eleventh Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP), ACM, 2018</div>
-                    <div class="publication-links">
-                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#"><i class="fas fa-code"></i> Code</a>
-                        <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-quote-right"></i> Citations</a>
-                    </div>
-                </div>
-
-                <p style="margin-top: 30px; text-align: center;">
-                    <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank" class="read-more">
-                        <i class="fas fa-external-link-alt"></i> View Complete Publication List on Google Scholar
-                    </a>
+                <p class="hero-bio">
+                    I am an AI researcher and practitioner with a PhD in Machine Learning and over five years of industry experience at <strong>JP Morgan Chase</strong> and <strong>Samsung Research</strong>. 
+                    My work bridges the gap between theoretical foundations and real-world applications, focusing on <strong>Large Language Models (LLMs)</strong>, <strong>Graph Neural Networks</strong>, 
+                    <strong>Retrieval-Augmented Generation (RAG)</strong>, and <strong>Computer Vision</strong>. 
+                    <br><br>
+                    Currently, I lead initiatives in scalable model serving, agentic AI systems, and financial optimization, holding multiple patents and publishing in top-tier venues like CVPR, BMVC, and IEEE TIP.
                 </p>
-            </section>
 
-            <!-- Projects Section -->
-            <section id="projects">
-                <h2 class="section-title">Recent Projects</h2>
-                
-                <div class="research-grid">
-                    <div class="research-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Trust or Abstention RAG System</h3>
-                        <p>Abstention-aware RAG system that answers only when evidence is sufficient. Hybrid retrieval (dense + BM25 + RRF) with confidence-based decision layer. Achieved MRR 0.68–0.99 on SQuAD v2 and custom MBZUAI dataset.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-balance-scale"></i>
-                        <h3>Legal Contract RAG System</h3>
-                        <p>Scalable agentic RAG system for legal contracts with autonomous multi-step reasoning. Two-phase metadata extraction, hybrid retrieval, and Llama 3.2 synthesis achieving 2–4s latency on CUAD/MAUD/ContractNLI.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-database"></i>
-                        <h3>Unified Retrieval Platform</h3>
-                        <p>Configuration-driven retrieval platform supporting CSV, S3, JSON with BM25, SPLADE, and dense retrieval. Features pluggable rerankers, multi-level caching, NER pipelines, and Graph RAG integration.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-video"></i>
-                        <h3>Multi-Platform Video Publishing</h3>
-                        <p>Automated pipeline using Gemini API for generating platform-optimized titles and descriptions. Integrated REST APIs for YouTube, Instagram, Facebook, and WhatsApp distribution.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>NIFTY 500 Trading Platform</h3>
-                        <p>Automated backtesting and deployment platform for swing trading strategies. Real-time market scanning, technical analysis engine, and comprehensive audit logging.</p>
-                    </div>
-
-                    <div class="research-card">
-                        <i class="fas fa-newspaper"></i>
-                        <h3>Agentic News Analysis Framework</h3>
-                        <p>Real-time financial news analysis system categorizing M&A, investments, product launches. Dynamic tool-calling mechanism for immediate impact assessment.</p>
-                    </div>
+                <div class="contact-links">
+                    <a href="mailto:ranjan.rev@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="https://github.com/ranjanZ" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/ranjan-mondal-176b0362/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://ranjanz.github.io/" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
+                    <a href="https://dblp.org/pid/xx/xxxx.html" target="_blank"><i class="fas fa-book"></i> DBLP</a>
                 </div>
-            </section>
+            </div>
+            <!-- Replace src with your actual photo URL -->
+            <img src="https://via.placeholder.com/200x200?text=Photo" alt="Ranjan Mondal" class="profile-img">
+        </div>
+    </header>
 
-            <!-- Blog Section -->
-            <section id="blog">
-                <h2 class="section-title">Research Blog</h2>
-                
-                <div class="blog-grid">
-                    <div class="blog-post">
-                        <div class="blog-header">
-                            <div class="blog-date">March 15, 2025</div>
-                            <h3 class="blog-title">Understanding DPO: Direct Preference Optimization for LLM Alignment</h3>
-                        </div>
-                        <div class="blog-body">
-                            <p>Direct Preference Optimization (DPO) has emerged as a powerful alternative to traditional RLHF. In this post, we explore the mathematical foundations of DPO and how it simplifies the alignment process while maintaining competitive performance.</p>
-                            <div class="blog-tags">
-                                <span class="blog-tag">LLM</span>
-                                <span class="blog-tag">RLHF</span>
-                                <span class="blog-tag">DPO</span>
-                                <span class="blog-tag">Alignment</span>
-                            </div>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </div>
+    <main class="container">
 
-                    <div class="blog-post">
-                        <div class="blog-header">
-                            <div class="blog-date">February 28, 2025</div>
-                            <h3 class="blog-title">Building Production-Ready RAG Systems: Lessons from Industry</h3>
-                        </div>
-                        <div class="blog-body">
-                            <p>Deploying RAG systems at scale requires careful consideration of retrieval strategies, caching mechanisms, and evaluation frameworks. Here are key insights from building Retrieval-as-a-Service platforms.</p>
-                            <div class="blog-tags">
-                                <span class="blog-tag">RAG</span>
-                                <span class="blog-tag">Production ML</span>
-                                <span class="blog-tag">Retrieval</span>
-                            </div>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </div>
-
-                    <div class="blog-post">
-                        <div class="blog-header">
-                            <div class="blog-date">January 20, 2025</div>
-                            <h3 class="blog-title">Graph Neural Networks for Financial Peer Identification</h3>
-                        </div>
-                        <div class="blog-body">
-                            <p>Processing 400M+ company records requires innovative approaches to graph construction and message passing. This post details our scalable GNN architecture for multi-modal peer matching.</p>
-                            <div class="blog-tags">
-                                <span class="blog-tag">GNN</span>
-                                <span class="blog-tag">Finance</span>
-                                <span class="blog-tag">Graph ML</span>
-                            </div>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </div>
-
-                    <div class="blog-post">
-                        <div class="blog-header">
-                            <div class="blog-date">December 10, 2024</div>
-                            <h3 class="blog-title">Multi-Level Caching Strategies for Low-Latency Retrieval</h3>
-                        </div>
-                        <div class="blog-body">
-                            <p>Implementing semantic caching with FAISS indices alongside cross-encoder caching can reduce latency by 60-80%. We share our implementation details and performance benchmarks.</p>
-                            <div class="blog-tags">
-                                <span class="blog-tag">Caching</span>
-                                <span class="blog-tag">FAISS</span>
-                                <span class="blog-tag">Performance</span>
-                            </div>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </div>
-
-                    <div class="blog-post">
-                        <div class="blog-header">
-                            <div class="blog-date">November 5, 2024</div>
-                            <h3 class="blog-title">Fine-tuning Small Language Models: A Practical Guide</h3>
-                        </div>
-                        <div class="blog-body">
-                            <p>SLMs offer compelling advantages for domain-specific tasks. This guide covers PEFT techniques, LoRA configuration, and best practices for efficient fine-tuning on limited hardware.</p>
-                            <div class="blog-tags">
-                                <span class="blog-tag">SLM</span>
-                                <span class="blog-tag">Fine-tuning</span>
-                                <span class="blog-tag">PEFT</span>
-                                <span class="blog-tag">LoRA</span>
-                            </div>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </div>
-
-                    <div class="blog-post">
-                        <div class="blog-header">
-                            <div class="blog-date">October 18, 2024</div>
-                            <h3 class="blog-title">Agentic AI: Building Autonomous Reasoning Systems</h3>
-                        </div>
-                        <div class="blog-body">
-                            <p>Multi-agent architectures with checker-based validation can significantly reduce hallucinations in RAG systems. Explore our implementation of agentic frameworks for legal contract analysis.</p>
-                            <div class="blog-tags">
-                                <span class="blog-tag">Agentic AI</span>
-                                <span class="blog-tag">Multi-Agent</span>
-                                <span class="blog-tag">Reasoning</span>
-                            </div>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Invited Talks Section -->
-            <section id="talks">
-                <h2 class="section-title">Invited Talks & Tutorials</h2>
-                
-                <div class="publication">
-                    <div class="publication-title">LLM Fine-Tuning: From Transformers to DPO</div>
-                    <div class="publication-venue">National Workshop on LLMs & Agentic AI, Chandigarh University, India — February 2025</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: #555;">Comprehensive tutorial covering decoder-only models, SFT, PEFT, RLHF, PPO, and DPO techniques for LLM alignment.</p>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Deep Learning: Foundation to Cutting Edge Technologies</div>
-                    <div class="publication-venue">SERB Sponsored Workshop, UPES, Dehradun, India — July 2024</div>
-                    <p style="margin-top: 10px; font-size: 14px; color: #555;">Keynote address on the evolution of deep learning from foundational concepts to state-of-the-art applications.</p>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Learning with Structuring Elements</div>
-                    <div class="publication-venue">Winter School on Deep Learning, ISI, Kolkata, India — March 2022</div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Deep Learning Fundamentals</div>
-                    <div class="publication-venue">Indian Institute of Information Technology (IIIT), Guwahati, India — March 2020</div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Data Visualization using Python</div>
-                    <div class="publication-venue">ISI-ICTP Summer School on Internet of Things, Kolkata — July 2019</div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Object Supervised Learning to Adversarial Learning</div>
-                    <div class="publication-venue">Faculty Development Program on Image and Vision Computing, Techno Main — January 2019</div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Convolutional Neural Network and Autoencoder Tutorial</div>
-                    <div class="publication-venue">Fourth Summer School on Computer Vision, Graphics and Image Processing, ISI — June 2018</div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">Python and Deep Learning Tutorial</div>
-                    <div class="publication-venue">Fourth Summer School on Computer Vision, Graphics and Image Processing, ISI — June 2017</div>
-                </div>
-            </section>
-
-            <!-- Awards Section -->
-            <section id="awards">
-                <h2 class="section-title">Honors & Awards</h2>
-                
-                <div class="news-item">
-                    <div class="news-date">2024</div>
+        <!-- NEWS SECTION -->
+        <section id="news">
+            <h2 class="section-title">News & Updates</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-date">Feb 2025</span>
                     <div class="news-content">
-                        <h4>Impact and Innovation Award</h4>
-                        <p>JP Morgan Chase & Co, Bangalore — Recognized for exceptional contributions to AI/ML initiatives and retrieval platform development.</p>
+                        <span class="news-tag talk">Invited Talk</span>
+                        <p>Delivered an invited talk on <strong>"LLM Fine-Tuning: From Transformers to DPO"</strong> at the National Workshop on LLMs & Agentic AI, Chandigarh University.</p>
                     </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">2023</div>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">Jan 2025</span>
                     <div class="news-content">
-                        <h4>Global Hackathon JPMC — 1st Place</h4>
-                        <p>Bangalore Region — Led team to victory in global competition focused on financial technology innovation.</p>
+                        <span class="news-tag research">Research</span>
+                        <p>Deployed a scalable <strong>Agentic RAG System</strong> for legal contract analysis at JPMC, reducing latency to 2-4s via dynamic routing and caching.</p>
                     </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">2019</div>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">Dec 2024</span>
                     <div class="news-content">
-                        <h4>Travel Grant — DGCI Conference</h4>
-                        <p>Paris, France — Received travel grant to present research at Discrete Geometry for Computer Imagery conference.</p>
+                        <span class="news-tag award">Award</span>
+                        <p>Received the <strong>Impact and Innovation Award</strong> at JP Morgan Chase for the development of the Retrieval-as-a-Service platform.</p>
                     </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">2019</div>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">July 2024</span>
                     <div class="news-content">
-                        <h4>Travel Grant — ICDAR Conference</h4>
-                        <p>Sydney, Australia — CSIR travel grant to present at International Conference on Document Analysis and Recognition.</p>
+                        <span class="news-tag talk">Invited Talk</span>
+                        <p>Gave an invited talk on <strong>"Deep Learning: Foundation to Cutting Edge Technologies"</strong> at the SERB Sponsored Workshop, UPES Dehradun.</p>
                     </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">2018</div>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">Ongoing</span>
                     <div class="news-content">
-                        <h4>NIRTE2018 (CVPR-W) Challenge — 5th Place</h4>
-                        <p>Image De-hazing Challenge — Ranked among top performers at CVPR Workshop competition.</p>
+                        <span class="news-tag research">Research</span>
+                        <p>Leading the development of a multi-modal Graph RAG system integrating entity resolution and community-based dense retrieval.</p>
                     </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- RESEARCH INTERESTS -->
+        <section id="research">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Large Language Models</h3>
+                    <p>Fine-tuning SLMs/LLMs (Llama, BERT), RLHF, DPO, and efficient serving with vLLM and Ray Serve for financial domains.</p>
                 </div>
-
-                <div class="news-item">
-                    <div class="news-date">2018</div>
-                    <div class="news-content">
-                        <h4>Intel AI Student Ambassador</h4>
-                        <p>Selected as Intel AI Student Ambassador for outstanding contributions to AI education and research.</p>
-                    </div>
+                <div class="research-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Graph Machine Learning</h3>
+                    <p>Scalable GNNs for peer identification, anomaly detection in company graphs, and knowledge graph construction for RAG.</p>
                 </div>
-
-                <div class="news-item">
-                    <div class="news-date">2017</div>
-                    <div class="news-content">
-                        <h4>Intel Hackathon — 2nd Place</h4>
-                        <p>"Making Autonomous Vehicles Safer For Humans" — Secured second place in national hackathon competition.</p>
-                    </div>
+                <div class="research-card">
+                    <i class="fas fa-search"></i>
+                    <h3>RAG & Search Systems</h3>
+                    <p>Building end-to-end Retrieval-as-a-Service platforms, hybrid retrieval (BM25 + Dense), cross-encoder reranking, and agentic workflows.</p>
                 </div>
-
-                <div class="news-item">
-                    <div class="news-content">
-                        <h4 style="margin-top: 20px;">Professional Service</h4>
-                        <p style="font-size: 14px; color: #555;">Reviewer for IEEE Transactions on Image Processing, CVPR, ICCV, and Pattern Recognition Letters</p>
-                    </div>
+                <div class="research-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Quantitative Trading</h3>
+                    <p>Algorithmic trading strategies, backtesting frameworks for NIFTY 500, and event-driven execution using agentic AI.</p>
                 </div>
-            </section>
+                <div class="research-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Computer Vision</h3>
+                    <p>Video panoptic segmentation, morphological networks, image dehazing/deraining, and real-time instance tracking.</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Reinforcement Learning</h3>
+                    <p>Applying RL for decision making in trading agents and optimizing LLM alignment through PPO and DPO.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Footer -->
-            <footer>
-                <p>&copy; 2025 Prof. Ranjan Mondal. All rights reserved.</p>
-                <p style="margin-top: 10px;">Department of Computer Science & Engineering | Machine Learning Research Laboratory</p>
-                <p style="margin-top: 5px; font-size: 13px;">Bangalore, India | <a href="mailto:ranjan.rev@gmail.com" style="color: #bdc3c7;">ranjan.rev@gmail.com</a></p>
-            </footer>
-        </main>
-    </div>
-
-    <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('.nav-bar a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-bar a');
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
             
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-role">Senior Associate, Applied AI/ML</div>
+                        <div class="exp-company">JP Morgan Chase & Co., Bangalore</div>
+                    </div>
+                    <div class="exp-date">Jan 2023 – Present</div>
+                </div>
+                <div class="exp-desc">
+                    <p>Leading applied AI/ML initiatives in the financial domain, focusing on large-scale graph learning, LLM orchestration, and mathematical modeling.</p>
+                    <ul>
+                        <li>Architected a unified <strong>Retrieval-as-a-Service</strong> platform supporting heterogeneous data sources (CSV, S3, JSON) with hybrid retrieval and multi-level caching.</li>
+                        <li>Engineered an <strong>Agentic RAG System</strong> for legal contracts with autonomous multi-step reasoning, achieving 2–4s latency.</li>
+                        <li>Developed a real-time news analysis framework for M&A and investment events using dynamic tool-calling mechanisms.</li>
+                        <li>Built a scalable GNN system processing 400M+ multi-modal company records for peer matching.</li>
+                    </ul>
+                </div>
+            </div>
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-role">Lead Research Engineer</div>
+                        <div class="exp-company">Samsung Research, Bangalore</div>
+                    </div>
+                    <div class="exp-date">2021 – 2023</div>
+                </div>
+                <div class="exp-desc">
+                    <p>Led research on state-of-the-art video panoptic segmentation for embedded platforms.</p>
+                    <ul>
+                        <li>Implemented real-time instance tracking and temporal stability algorithms for accurate mask prediction.</li>
+                        <li>Optimized deep learning models for deployment on resource-constrained edge devices.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS (Updated based on Scholar Profile Structure) -->
+        <section id="publications">
+            <h2 class="section-title">Selected Publications</h2>
+            <p style="margin-bottom: 20px; font-style: italic; color: var(--text-light);">
+                * Denotes equal contribution. For a complete list, please visit my <a href="https://scholar.google.com/citations?user=JWuX_HsAAAAJ" target="_blank">Google Scholar</a>.
+            </p>
+            <ul class="pub-list">
+                <!-- Recent Works (Placeholders based on your CV/Scholar - Update titles/years as needed) -->
+                <li class="pub-item">
+                    <span class="pub-year">2022</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Morphological network: How far can we go with morphological neurons?</span>
+                        <span class="pub-authors">Ranjan Mondal, Sanchayan Santra, Soumendu Sundar Mukherjee, and Bhabatosh Chanda</span>
+                        <div class="pub-venue">British Machine Vision Conference (BMVC), 2022</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                            <a href="#">Code</a>
+                            <a href="#">BibTeX</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <span class="pub-year">2021</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Morphological convolutional neural networks for hyperspectral image classification</span>
+                        <span class="pub-authors">Swalpa Kumar Roy, Ranjan Mondal, Mercedes E Paoletti, Juan M Haut, and Antonio Plaza</span>
+                        <div class="pub-venue">IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2021</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                            <a href="#">DOI</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <span class="pub-year">2019</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Learning 2d morphological network for old document image binarization</span>
+                        <span class="pub-authors">Ranjan Mondal, Deepayan Chakraborty, and Bhabatosh Chanda</span>
+                        <div class="pub-venue">15th IAPR International Conference on Document Analysis and Recognition (ICDAR), 2019</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                            <a href="#">Code</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <span class="pub-year">2019</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Morphological networks for image de-raining</span>
+                        <span class="pub-authors">Ranjan Mondal, Pulak Purkait, Sanchayan Santra, and Bhabatosh Chanda</span>
+                        <div class="pub-venue">International Conference on Discrete Geometry for Computer Imagery (DGCI), Springer, 2019</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <span class="pub-year">2018</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Image dehazing by joint estimation of transmittance and airlight using bi-directional consistency loss minimized fcn</span>
+                        <span class="pub-authors">Ranjan Mondal, Sanchayan Santra, and Bhabatosh Chanda</span>
+                        <div class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPR-W), 2018</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                            <a href="#">Code</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <span class="pub-year">2018</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Learning a patch quality comparator for single image dehazing</span>
+                        <span class="pub-authors">Sanchayan Santra, Ranjan Mondal, and Bhabatosh Chanda</span>
+                        <div class="pub-venue">IEEE Transactions on Image Processing (TIP), 2018</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                            <a href="#">DOI</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pub-item">
+                    <span class="pub-year">2018</span>
+                    <div class="pub-details">
+                        <span class="pub-title">Anomaly detection using context dependent optical flow</span>
+                        <span class="pub-authors">Ranjan Mondal and Bhabatosh Chanda</span>
+                        <div class="pub-venue">Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP), ACM, 2018</div>
+                        <div class="pub-links">
+                            <a href="#">PDF</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- BLOG / TECHNICAL WRITING -->
+        <section id="blog">
+            <h2 class="section-title">Technical Insights & Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">March 2025</span>
+                        <h3 class="blog-title"><a href="#">Building Abstention-Aware RAG Systems</a></h3>
+                        <p class="blog-excerpt">Exploring strategies for RAG systems to know when they don't know. We implement hybrid retrieval and confidence-based decision layers to reduce hallucinations in high-stakes domains.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">January 2025</span>
+                        <h3 class="blog-title"><a href="#">From SFT to DPO: A Practical Guide to LLM Fine-Tuning</a></h3>
+                        <p class="blog-excerpt">A deep dive into the evolution of alignment techniques. Comparing Supervised Fine-Tuning (SFT), RLHF with PPO, and Direct Preference Optimization (DPO) for financial LLMs.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">November 2024</span>
+                        <h3 class="blog-title"><a href="#">Scaling Graph RAG with Community Detection</a></h3>
+                        <p class="blog-excerpt">How we integrated community-based dense retrieval over knowledge graphs to improve answer relevance in complex multi-hop queries.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">August 2024</span>
+                        <h3 class="blog-title"><a href="#">Architecting Low-Latency Model Serving with Ray & vLLM</a></h3>
+                        <p class="blog-excerpt">Lessons learned from productionizing a retrieval platform serving multiple high-impact business use cases with sub-second latency requirements.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- AWARDS & SERVICE -->
+        <section id="awards">
+            <h2 class="section-title">Honors & Service</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Awards</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px;"><strong>1st Place,</strong> Global Hackathon JPMC (Bangalore Region)</li>
+                        <li style="margin-bottom: 10px;"><strong>Impact and Innovation Award,</strong> JP Morgan Chase</li>
+                        <li style="margin-bottom: 10px;"><strong>5th Place,</strong> NIRTE2018 (CVPR-W) Challenge on Image De-hazing</li>
+                        <li style="margin-bottom: 10px;"><strong>2nd Place,</strong> Intel Hackathon: "Making Autonomous Vehicles Safer"</li>
+                        <li style="margin-bottom: 10px;"><strong>Intel AI Student Ambassador</strong></li>
+                        <li style="margin-bottom: 10px;"><strong>Travel Grant,</strong> DGCI-2019 (Paris, France) & ICDAR-2019 (Sydney, Australia)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Professional Service</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px;"><strong>Reviewer:</strong> IEEE Transactions on Image Processing (TIP)</li>
+                        <li style="margin-bottom: 10px;"><strong>Reviewer:</strong> IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+                        <li style="margin-bottom: 10px;"><strong>Reviewer:</strong> International Conference on Computer Vision (ICCV)</li>
+                        <li style="margin-bottom: 10px;"><strong>Reviewer:</strong> Pattern Recognition Letters</li>
+                        <li style="margin-bottom: 10px;"><strong>Contributor:</strong> MLPACK Library (Parallel SGD & Nonlinear Conjugate Gradient)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ranjan Mondal. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #94a3b8;">
+                Designed with academic rigor. Last updated: February 2025.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
