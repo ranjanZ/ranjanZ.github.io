@@ -48,7 +48,9 @@
         section { margin-bottom: 4rem; }
 
         header { padding: 5rem 0 3rem; text-align: left; }
-        .name-title { margin-bottom: 1.5rem; }
+        .header-content { display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 1.5rem; }
+        .profile-pic { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 3px solid var(--border-color); }
+        .name-title { flex: 1; }
         .role { font-size: 1.125rem; color: var(--text-light); font-weight: 400; margin-bottom: 1.5rem; }
 
         .contact-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem; color: var(--text-main); }
@@ -105,9 +107,12 @@
 
     <div class="container">
         <header>
-            <div class="name-title">
-                <h1>Ranjan Mondal</h1>
-                <p class="role">Senior Associate, Applied AI/ML at JP Morgan Chase & Co.<br>PhD in Machine Learning (ISI Kolkata)</p>
+            <div class="header-content">
+                <img src="scripts/images/personal-big.JPG" alt="Ranjan Mondal" class="profile-pic">
+                <div class="name-title">
+                    <h1>Ranjan Mondal</h1>
+                    <p class="role">Senior Associate, Applied AI/ML at JP Morgan Chase & Co.<br>PhD in Machine Learning (ISI Kolkata)</p>
+                </div>
             </div>
             
             <div class="contact-links">
@@ -127,7 +132,7 @@
 
         <section id="news">
             <h2>News</h2>
-            <div class="news-list">
+            <div class="news-list" id="news-container" style="max-height: 300px; overflow: hidden;">
                 <div class="news-item">
                     <div class="news-date">Feb 2025</div>
                     <div class="news-content">
@@ -241,21 +246,38 @@
             <div class="blog-grid">
                 <article class="blog-post">
                     <div class="blog-date">Jan 2025</div>
-                    <h3 class="blog-title"><a href="#">Building Abstention-Aware RAG Systems</a></h3>
+                    <h3 class="blog-title"><a href="blog/blog1.html">Building Abstention-Aware RAG Systems</a></h3>
                     <p class="blog-excerpt">Strategies to make RAG systems recognize uncertainty in high-stakes domains.</p>
                 </article>
                 <article class="blog-post">
                     <div class="blog-date">Nov 2024</div>
-                    <h3 class="blog-title"><a href="#">From SFT to DPO: LLM Fine-Tuning Guide</a></h3>
+                    <h3 class="blog-title"><a href="blog/blog2.html">From SFT to DPO: LLM Fine-Tuning Guide</a></h3>
                     <p class="blog-excerpt">Comparing alignment techniques for domain-specific models.</p>
                 </article>
             </div>
+            <p style="margin-top: 1.5rem;"><a href="blog/all_blogs.html" style="font-weight: 600; color: var(--accent-color);">View all blogs →</a></p>
         </section>
 
         <footer>
             <p>&copy; 2025 Ranjan Mondal</p>
         </footer>
     </div>
+
+    <script>
+        // Auto-scroll news section
+        const newsContainer = document.getElementById('news-container');
+        if (newsContainer) {
+            let scrollSpeed = 1;
+            function autoScroll() {
+                newsContainer.scrollTop += scrollSpeed;
+                // Reset to top when reaching bottom
+                if (newsContainer.scrollTop + newsContainer.clientHeight >= newsContainer.scrollHeight) {
+                    newsContainer.scrollTop = 0;
+                }
+            }
+            setInterval(autoScroll, 50);
+        }
+    </script>
 
 </body>
 </html>
